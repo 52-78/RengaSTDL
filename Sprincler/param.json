@@ -1,0 +1,148 @@
+{
+    "metadata":{
+      "defaultName": "Спринклер",
+      "description": "Спринклер - оборудование для системы водяного пожаротушения. \n• Вертикальная или горизонтальная установка. \n• Открытая или скрытая установка",
+      "version": "1.0.0",
+      "author": "Renga Software"
+   },
+    "styleParameters":[
+       {
+          "name": "General",
+          "text": "Общие",
+          "params": [
+             {
+                "name": "material",
+                "text": "Материал",
+                "type": "Id",
+                "entityTypeId": "0abcb18f-0aaf-4509-bf89-5c5fad9d5d8b"
+             }
+          ]
+       },
+       {
+          "name": "Geometry",
+          "text": "Габаритные размеры",
+          "params": [
+             {
+                "name": "SpWidth",
+                "text": "Ширина оросителя",
+                "type": "Length",
+                "default": 22,
+                "min": 1,
+                "max": 1000
+             },
+             {
+                "name": "SpHeight",
+                "text": "Высота оросителя",
+                "type": "Length",
+                "default": 40,
+                "min": 1,
+                "max": 1000
+             },
+             {
+                "name": "BodyDiameter",
+                "text": "Диаметр соединения",
+                "type": "Length",
+                "default": 25,
+                "min": 1,
+                "max": 1000
+             },
+             {
+                "name": "BodyHeight",
+                "text": "Высота соединения",
+                "type": "Length",
+                "default": 20,
+                "min": 1,
+                "max": 1000
+             },
+             {
+                "name": "SpType",
+                "text": "Тип оросителя",
+                "type": "UserEnum",
+                "default": "Vertical",
+                "items": [
+                    {
+                        "key": "Vertical",
+                        "text": "Вертикальный"
+                        },
+                    {
+                        "key": "Horizontal",
+                        "text": "Горизонтальный"
+                        }
+                ]
+            },
+            {
+                "name": "InstallationType",
+                "text": "Способ установки",
+                "type": "UserEnum",
+                "default": "Open",
+                "items": [
+                    {
+                        "key": "Open",
+                        "text": "Открытая"
+                        },
+                    {
+                        "key": "Recessed",
+                        "text": "Углублённая"
+                        }
+                ]
+            },
+            {
+                "name": "cupHeight",
+                "text": "Высота монтажной чашки",
+                "type": "Length",
+                "default": 28,
+                "min": 1,
+                "max": 1000
+             },
+             {
+                "name": "CupDiameter",
+                "text": "Диаметр монтажной чашки",
+                "type": "Length",
+                "default": 52,
+                "min": 1,
+                "max": 1000
+             }
+
+          ]
+       },
+       {
+    "name":"Inlet",
+    "text":"Вход",
+    "params":[
+        {
+            "name":"ConnectionType",
+            "text":"Тип соединения",
+            "type":"CoreEnum",
+            "coreEnumType":"PipeConnectorType",
+            "default": "Thread"
+        },
+        {
+            "name": "ThreadSize",
+            "text": "Номинальный диаметр",
+            "type": "CoreEnum",
+            "coreEnumType": "PipeThreadSize",
+            "default": "D0_75"
+        },
+        {
+            "name": "NominalDiameter",
+            "text": "Номинальный диаметр",
+            "type": "Length",
+            "default": 25,
+            "min": 1,
+            "max": 1000
+        }
+    ]
+       }       
+    ],
+    "ports": [
+       {
+           "name": "Inlet",
+           "text": "Вход",
+           "flowDirection": "Inlet",
+           "systemCategories": [
+               "DomesticColdWater",
+               "Firewater"
+           ]
+       }
+   ]
+ }

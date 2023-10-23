@@ -91,7 +91,7 @@ local symbolPlacement = Placement3D(Point3D(0, 0, 0), Vector3D(0, 1, 0), Vector3
 local symbol = GeometrySet2D()
 symbol:AddCurve(delta)
 symbol:AddLineColorSolidArea(FillArea(delta))
-if parameters.Geometry.SpType != "Vertical" then
+if parameters.Geometry.SpType ~= "Vertical" then
   symbol:AddCurve(corner)
 end
 local symbolicGeometry = ModelGeometry()

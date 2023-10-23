@@ -1,0 +1,191 @@
+{
+    "metadata":{
+      "defaultName": "Регистр отопления из гладких труб секционный",
+      "description": "Оборудование. Секционный регистр ",
+      "version": "1.0.0",
+      "author": "Renga Software"
+   },
+    "styleParameters":[
+       {
+          "name": "General",
+          "text": "Общие",
+          "params": [
+             {
+                "name": "material",
+                "text": "Материал",
+                "type": "Id",
+                "entityTypeId": "0abcb18f-0aaf-4509-bf89-5c5fad9d5d8b"
+             }
+          ]
+       },
+       {
+          "name": "Geometry",
+          "text": "Габаритные размеры",
+          "params": [
+             {
+                "name": "Length",
+                "text": "Длина регистра",
+                "type": "Length",
+                "default": 2000,
+                "min": 300,
+                "max": 10000
+             },
+             {
+                "name": "PipeDiameter",
+                "text": "Диаметр трубы",
+                "type": "Length",
+                "default": 108,
+                "min": 25,
+                "max": 219
+             },
+             {
+                "name": "PipeSpacing",
+                "text": "Расстояние между осями труб",
+                "type": "Length",
+                "default": 270,
+                "min": 50,
+                "max": 1000
+             },
+             {
+                "name": "PipeCount",
+                "text": "Количество труб",
+                "type": "Integer",
+                "default": 6,
+                "min": 2,
+                "max": 10
+             },
+             {
+                "name": "PlugDiameter",
+                "text": "Диаметр проточной пробки",
+                "type": "Length",
+                "default": 57,
+                "min": 25,
+                "max": 219
+             },
+             {
+                "name": "NippleDiameter",
+                "text": "Диаметр патрубков",
+                "type": "Length",
+                "default": 25,
+                "min": 1,
+                "max": 219
+             }
+
+          ]
+       },
+       {
+    "name":"Inlet",
+    "text":"Вход",
+    "params":[
+        {
+            "name":"ConnectionType",
+            "text":"Тип соединения",
+            "type":"CoreEnum",
+            "coreEnumType":"PipeConnectorType",
+            "default": "Thread"
+        },
+        {
+            "name": "ThreadSize",
+            "text": "Номинальный диаметр",
+            "type": "CoreEnum",
+            "coreEnumType": "PipeThreadSize",
+            "default": "D0_75"
+        },
+        {
+            "name": "NominalDiameter",
+            "text": "Номинальный диаметр",
+            "type": "Length",
+            "default": 25,
+            "min": 1,
+            "max": 200
+        }
+    ]
+       },
+       {
+        "name":"Outlet",
+        "text":"Выход",
+        "params":[
+            {
+                "name":"ConnectionType",
+                "text":"Тип соединения",
+                "type":"CoreEnum",
+                "coreEnumType":"PipeConnectorType",
+                "default": "Thread"
+            },
+            {
+                "name": "ThreadSize",
+                "text": "Номинальный диаметр",
+                "type": "CoreEnum",
+                "coreEnumType": "PipeThreadSize",
+                "default": "D0_75"
+            },
+            {
+                "name": "NominalDiameter",
+                "text": "Номинальный диаметр",
+                "type": "Length",
+                "default": 25,
+                "min": 1,
+                "max": 200
+            }
+        ]
+           },
+           {
+            "name":"AirRelease",
+            "text":"Выход воздуха",
+            "params":[
+                {
+                    "name":"ConnectionType",
+                    "text":"Тип соединения",
+                    "type":"CoreEnum",
+                    "coreEnumType":"PipeConnectorType",
+                    "default": "Thread"
+                },
+                {
+                    "name": "ThreadSize",
+                    "text": "Номинальный диаметр",
+                    "type": "CoreEnum",
+                    "coreEnumType": "PipeThreadSize",
+                    "default": "D0_75"
+                },
+                {
+                    "name": "NominalDiameter",
+                    "text": "Номинальный диаметр",
+                    "type": "Length",
+                    "default": 25,
+                    "min": 1,
+                    "max": 200
+                }
+            ]
+               }          
+
+    ],
+    "ports": [
+       {
+           "name": "Inlet",
+           "text": "Вход",
+           "flowDirection": "Inlet",
+           "systemCategories": [
+               "Heating",
+               "OtherPipeSystem"
+           ]
+       },
+       {
+        "name": "Outlet",
+        "text": "Выход",
+        "flowDirection": "Outlet",
+        "systemCategories": [
+            "Heating",
+            "OtherPipeSystem"
+        ]
+        },
+        {
+         "name": "AirRelease",
+         "text": "Выход воздуха",
+         "flowDirection": "Outlet",
+         "systemCategories": [
+             "Heating",
+             "OtherPipeSystem"
+         ]
+         }
+   ]
+ }

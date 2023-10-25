@@ -1,0 +1,23 @@
+  
+    {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "type": "shell",
+                "label": "Build rst file",
+                "command": "C:\\Users\\kotov\\Downloads\\RengaSTDLSDK\\RstBuilder\\RstBuilder.exe",
+                "args": [
+                    "trap.json",
+                    "trap.lua",                 
+                    "-o",
+                    "Grease trap.rst"
+                ],
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                }
+
+            }
+        ]
+    }
+    

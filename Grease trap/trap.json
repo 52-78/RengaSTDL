@@ -1,0 +1,180 @@
+{
+    "metadata":{
+      "defaultName": "Жироловка",
+      "description": "Оборудование. Может использоваться как Жироловка или Песколовка под мойку.",
+      "version": "1.0.0",
+      "author": "Renga Software"
+   },
+    "styleParameters":[
+       {
+          "name": "General",
+          "text": "Общие",
+          "params": [
+             {
+                "name": "material",
+                "text": "Материал",
+                "type": "Id",
+                "entityTypeId": "0abcb18f-0aaf-4509-bf89-5c5fad9d5d8b"
+             }
+          ]
+       },
+       {
+          "name": "Geometry",
+          "text": "Габаритные размеры",
+          "params": [
+             {
+                "name": "Width",
+                "text": "Ширина",
+                "type": "Length",
+                "default": 400,
+                "min": 100,
+                "max": 10000
+             },
+             {
+                "name": "Depth",
+                "text": "Глубина",
+                "type": "Length",
+                "default": 300,
+                "min": 100,
+                "max": 10000
+             },
+             {
+                "name": "Height",
+                "text": "Высота",
+                "type": "Length",
+                "default": 300,
+                "min": 100,
+                "max": 10000
+             }
+
+          ]
+       },
+       {
+    "name":"Inlet",
+    "text":"Вход",
+    "params":[
+        {
+            "name": "InletPosition",
+            "text": "Положение патрубка",
+            "type": "UserEnum",
+            "default": "Horizontal",
+            "items": [
+                {
+                    "key": "Vertical",
+                    "text": "Вертикально"
+                    },
+                {
+                    "key": "Horizontal",
+                    "text": "Горизонтально"
+                    }
+            ]
+        },
+        {
+            "name": "InletOffset",
+            "text": "Смещение патрубка по высоте",
+            "type": "Length",
+            "default": 270,
+            "min": 1,
+            "max": 10000
+         },
+         {
+            "name": "InletDiameter",
+            "text": "Наружный диаметр патрубка",
+            "type": "Length",
+            "default": 50,
+            "min": 1,
+            "max": 1000
+         },
+        {
+            "name":"ConnectionType",
+            "text":"Тип соединения",
+            "type":"CoreEnum",
+            "coreEnumType":"PipeConnectorType",
+            "default": "Socket"
+        },
+        {
+            "name": "ThreadSize",
+            "text": "Номинальный диаметр",
+            "type": "CoreEnum",
+            "coreEnumType": "PipeThreadSize",
+            "default": "D2_0"
+        },
+        {
+            "name": "NominalDiameter",
+            "text": "Номинальный диаметр",
+            "type": "Length",
+            "default": 50,
+            "min": 1,
+            "max": 1000
+        }
+    ]
+       },
+       {
+        "name":"Outlet",
+        "text":"Выход",
+        "params":[
+            {
+                "name": "OutlettOffset",
+                "text": "Смещение патрубка по высоте",
+                "type": "Length",
+                "default": 265,
+                "min": 1,
+                "max": 10000
+             },
+             {
+                "name": "OutletDiameter",
+                "text": "Наружный диаметр патрубка",
+                "type": "Length",
+                "default": 50,
+                "min": 1,
+                "max": 1000
+             },
+             {
+                "name":"ConnectionType",
+                "text":"Тип соединения",
+                "type":"CoreEnum",
+                "coreEnumType":"PipeConnectorType",
+                "default": "Socket"
+            },
+            {
+                "name": "ThreadSize",
+                "text": "Номинальный диаметр",
+                "type": "CoreEnum",
+                "coreEnumType": "PipeThreadSize",
+                "default": "D2_0"
+            },
+            {
+                "name": "NominalDiameter",
+                "text": "Номинальный диаметр",
+                "type": "Length",
+                "default": 50,
+                "min": 1,
+                "max": 1000
+            }
+        ]
+           }          
+
+    ],
+    "ports": [
+       {
+           "name": "Inlet",
+           "text": "Вход",
+           "flowDirection": "Inlet",
+           "systemCategories": [
+               "DomesticSewage",
+               "Rainwater",
+               "IndustrialSewage"
+           ]
+       },
+       {
+        "name": "Outlet",
+        "text": "Выход",
+        "flowDirection": "Outlet",
+        "systemCategories": [
+            "DomesticSewage",
+            "Rainwater",
+            "IndustrialSewage"
+        ]
+        }
+   ]
+ }

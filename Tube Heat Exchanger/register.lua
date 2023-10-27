@@ -6,7 +6,7 @@ local PipeCount = parameters.Geometry.PipeCount
 local PlugDiameter = parameters.Geometry.PlugDiameter
 local NippleDiameter = parameters.Geometry.NippleDiameter
 
--- создаем цилиндр и делаем нужное количество копий
+-- создаем цилиндр и делаем нужное количество копий --
 function Body()
 local cylinder = CreateRightCircularCylinder(PipeDiameter/2, Length):Rotate(CreateYAxis3D(), math.pi/2):Shift(0, 0, PipeDiameter/2) 
 local cylinders = {}

@@ -6,7 +6,7 @@ local PipeCount = parameters.Geometry.PipeCount
 local PlugDiameter = parameters.Geometry.PlugDiameter
 local NippleDiameter = parameters.Geometry.NippleDiameter
 
-
+-- создаем цилиндр и делаем нужное количество копий
 function Body()
 local cylinder = CreateRightCircularCylinder(PipeDiameter/2, Length):Rotate(CreateYAxis3D(), math.pi/2):Shift(0, 0, PipeDiameter/2) 
 local cylinders = {}
@@ -20,7 +20,7 @@ end
 
 
 if PipeCount ~= 1 then
-    PlugLength = (PipeCount-1)*PipeSpacing
+    PlugLength = (PipeCount - 1)*PipeSpacing
 else PlugLength = 1    
 end
 
@@ -48,7 +48,7 @@ function Socket()
 
 end
 
-local Plug1 = CreateRightCircularCylinder(PlugDiameter/2, PlugLength):Shift(Length-PlugDiameter, 0, 0):Shift(0, 0, PipeDiameter/2)
+local Plug1 = CreateRightCircularCylinder(PlugDiameter/2, PlugLength):Shift(Length - PlugDiameter, 0, 0):Shift(0, 0, PipeDiameter/2)
 local Plug2 = CreateRightCircularCylinder(PlugDiameter/2, PlugLength):Shift(PlugDiameter, 0, 0):Shift(0, 0, PipeDiameter/2)
 local United = Unite(Body(), Plug1)
 local United = Unite(United, Plug2)
@@ -97,7 +97,7 @@ local rightPlacement = Placement3D(Point3D(-1.5*NippleDiameter, 0, NippleOffset)
 
 
 local inletPort = Style.GetPort("Inlet")
-local airReleasePort = Style.GetPort("AirRelease")   
+local airReleasePort = Style.GetPort("AirRelease")
 
 SetPipeParameters(inletPort, parameters.Inlet)
 SetPipeParameters(airReleasePort, parameters.AirRelease)

@@ -106,8 +106,8 @@ geometry2d:AddCurve(CreateLineSegment2D(Point2D(width/2 - 1.5*outletDiameter, -o
 geometry2d:AddCurve(CreateLineSegment2D(Point2D(0, 0), Point2D(0, -outlettOffset)))
 
 if parameters.Inlet.InletPosition == "Vertical" then
-    geometry2d:AddCurve(CreateLineSegment2D(Point2D(-(width/2)+inletDiameter, -height), 
-                                            Point2D(-(width/2)+inletDiameter, -(height + 1.5*inletDiameter))))
+    geometry2d:AddCurve(CreateLineSegment2D(Point2D(-(width/2) + inletDiameter, -height), 
+                                            Point2D(-(width/2) + inletDiameter, -(height + 1.5*inletDiameter))))
 else
     geometry2d:AddCurve(CreateLineSegment2D(Point2D(-width/2, -inletOffset), 
                                             Point2D(-(width/2 + 1.5*inletDiameter), -inletOffset)))

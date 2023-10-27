@@ -1,5 +1,7 @@
+-- Получаем параметры из json
 local parameters = Style.GetParameterValues()
-local width = parameters.Geometry.Width
+-- Свои переменные в lua начинаются с маленькой буквы
+local width = parameters.Geometry.Width 
 local depth = parameters.Geometry.Depth
 local height = parameters.Geometry.Height
 local inletOffset = parameters.Inlet.InletOffset
@@ -34,12 +36,12 @@ function Socket()
     return UniteSocket
 end
 
-local unitedBody = Unite(Body(), Socket())
+local unitedBody = Unite(Body(), Socket()) -- объединяем солиды, чтобы не было лишней геометрии и были правильные ребра
 local trap = ModelGeometry()
-trap:AddSolid(unitedBody)
-Style.SetDetailedGeometry(trap)
+trap:AddSolid(unitedBody) -- добавляем солиды к модельной геометрии
+Style.SetDetailedGeometry(trap) -- добавляем модельную геометрию к стилю
 
---Прячем номинальный диаметр
+--Прячем номинальный диаметр (этот код пригодится нам не один раз)
 function SetPipeParameters(port, portParameters)
     local connectionType = portParameters.ConnectionType
     if connectionType == PipeConnectorType.Thread then
@@ -88,7 +90,7 @@ outletPort:SetPlacement(rightPlacement)
 
 
 
---Создаем символьную геометри
+--Создаем символьную геометрию
 
 local rectangle = CreateRectangle2D(Point2D(0, -height/2), 0, width, height)
 
@@ -98,6 +100,7 @@ local geometry2d = GeometrySet2D()
 geometry2d:AddCurve(rectangle)
 geometry2d:AddMaterialColorSolidArea(FillArea(rectangle))
 
+-- тут смущают отрицательные смещения, возможно, что неправильно задан плейсмент
 geometry2d:AddCurve(CreateLineSegment2D(Point2D(width/2 - 1.5*outletDiameter, -outlettOffset), Point2D(width/2 + 1.5*outletDiameter, -outlettOffset)))
 geometry2d:AddCurve(CreateLineSegment2D(Point2D(width/2 - 1.5*outletDiameter, -outlettOffset), Point2D(width/2 - 1.5*outletDiameter, -outlettOffset/2)))
 geometry2d:AddCurve(CreateLineSegment2D(Point2D(0, 0), Point2D(0, -outlettOffset)))
@@ -110,6 +113,7 @@ else
                                             Point2D(-(width/2 + 1.5*inletDiameter), -inletOffset)))
 end
 
+--тут задаем плейсмент 
 local symbolPlacement = Placement3D(Point3D(0, 0, 0), Vector3D(0, 1, 0), Vector3D(1, 0, 0))
 modelGeometry:AddGeometrySet2D(geometry2d, symbolPlacement)
 

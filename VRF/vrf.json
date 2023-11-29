@@ -1,0 +1,359 @@
+{
+    "metadata" : {
+        "defaultName" : "Настенный блок VRF",
+        "description" : "Общий шаблон внутренних блоков настенного типа мультизональных VRF-систем",
+        "version" : "1.2.0",
+        "author" : "Кирьян Евгений"
+    },
+    "styleParameters" : [
+        {
+            "name" : "General",
+            "text" : "Общие",
+            "params" : [
+                {
+                    "name" : "material",
+                    "text" : "Материал",
+                    "type" : "Id",
+                    "entityTypeId" : "0abcb18f-0aaf-4509-bf89-5c5fad9d5d8b"
+                }
+            ]
+        },
+        {
+            "name" : "Dimensions",
+            "text" : "Габаритные размеры",
+            "params" : [
+                {
+                    "name" : "bodyLength",
+                    "text" : "Длина корпуса",
+                    "type" : "Length",
+                    "default" : 970,
+                    "min" : 100,
+                    "max" : 2000
+                },
+                {
+                    "name" : "bodyWidth",
+                    "text" : "Ширина корпуса",
+                    "type" : "Length",
+                    "default" : 235,
+                    "min" : 100,
+                    "max" : 2000
+                },
+                {
+                    "name" : "bodyHeight",
+                    "text" : "Высота корпуса",
+                    "type" : "Length",
+                    "default" : 315,
+                    "min" : 100,
+                    "max" : 2000
+                }
+            ]
+        },
+        {
+            "name" : "WaterCoolant",
+            "text" : "Подача жидкости (вход)",
+            "params" : [
+                {
+                    "name" : "connectorType",
+                    "text" : "Вид соединения",
+                    "type" : "CoreEnum",
+                    "coreEnumType" : "PipeConnectorType",
+                    "default" : "Compressed"
+                },
+                {
+                    "name" : "threadSize",
+                    "text" : "Номинальный диаметр",
+                    "type" : "CoreEnum",
+                    "coreEnumType" : "PipeThreadSize",
+                    "default" : "D0_50"
+                },
+                {
+                    "name" : "nominalDiameter",
+                    "text" : "Номинальный диаметр",
+                    "type" : "Length",
+                    "default" : 10,
+                    "min" : 1,
+                    "max" : 100
+                },
+                {
+                    "name" : "connectionSide",
+                    "text" : "Сторона подключения",
+                    "type" : "UserEnum",
+                    "default" : "right",
+                    "items" : [
+                        {
+                            "key" : "right",
+                            "text" : "Справа"
+                        },
+                        {
+                            "key" : "left",
+                            "text" : "Слева"
+                        }
+                    ]
+                },
+                {
+                    "name" : "connectionDirection",
+                    "text" : "Направление подключения",
+                    "type" : "UserEnum",
+                    "default" : "side",
+                    "items" : [
+                        {
+                            "key" : "side",
+                            "text" : "Сбоку"
+                        },
+                        {
+                            "key" : "back",
+                            "text" : "Сзади"
+                        },
+                        {
+                            "key" : "below",
+                            "text" : "Снизу"
+                        }
+                    ]
+                },
+                {
+                    "name" : "portIndentation",
+                    "text" : "Отступ точки подключения",
+                    "type" : "Length",
+                    "default" : 50,
+                    "min" : 0,
+                    "max" : 200
+                }
+            ]
+        },
+        {
+            "name" : "GasCoolant",
+            "text" : "Подача газа (вход)",
+            "params" : [
+                {
+                    "name" : "connectorType",
+                    "text" : "Вид соединения",
+                    "type" : "CoreEnum",
+                    "coreEnumType" : "PipeConnectorType",
+                    "default" : "Compressed"
+                },
+                {
+                    "name" : "threadSize",
+                    "text" : "Номинальный диаметр",
+                    "type" : "CoreEnum",
+                    "coreEnumType" : "PipeThreadSize",
+                    "default" : "D0_50"
+                },
+                {
+                    "name" : "nominalDiameter",
+                    "text" : "Номинальный диаметр",
+                    "type" : "Length",
+                    "default" : 7,
+                    "min" : 1,
+                    "max" : 100
+                },
+                {
+                    "name" : "connectionSide",
+                    "text" : "Сторона подключения",
+                    "type" : "UserEnum",
+                    "default" : "right",
+                    "items" : [
+                        {
+                            "key" : "right",
+                            "text" : "Справа"
+                        },
+                        {
+                            "key" : "left",
+                            "text" : "Слева"
+                        }
+                    ]
+                },
+                {
+                    "name" : "connectionDirection",
+                    "text" : "Направление подключения",
+                    "type" : "UserEnum",
+                    "default" : "side",
+                    "items" : [
+                        {
+                            "key" : "side",
+                            "text" : "Сбоку"
+                        },
+                        {
+                            "key" : "back",
+                            "text" : "Сзади"
+                        },
+                        {
+                            "key" : "below",
+                            "text" : "Снизу"
+                        }
+                    ]
+                },
+                {
+                    "name" : "portIndentation",
+                    "text" : "Отступ точки подключения",
+                    "type" : "Length",
+                    "default" : 50,
+                    "min" : 0,
+                    "max" : 200
+                }
+            ]
+        },
+        {
+            "name" : "Drainage",
+            "text" : "Дренаж (выход)",
+            "params" : [
+                {
+                    "name" : "connectorType",
+                    "text" : "Вид соединения",
+                    "type" : "CoreEnum",
+                    "coreEnumType" : "PipeConnectorType",
+                    "default" : "Thread"
+                },
+                {
+                    "name" : "threadSize",
+                    "text" : "Номинальный диаметр",
+                    "type" : "CoreEnum",
+                    "coreEnumType" : "PipeThreadSize",
+                    "default" : "D0_50"
+                },
+                {
+                    "name" : "nominalDiameter",
+                    "text" : "Номинальный диаметр",
+                    "type" : "Length",
+                    "default" : 20,
+                    "min" : 1,
+                    "max" : 100
+                },
+                {
+                    "name" : "connectionSide",
+                    "text" : "Сторона подключения",
+                    "type" : "UserEnum",
+                    "default" : "right",
+                    "items" : [
+                        {
+                            "key" : "right",
+                            "text" : "Справа"
+                        },
+                        {
+                            "key" : "left",
+                            "text" : "Слева"
+                        }
+                    ]
+                },
+                {
+                    "name" : "connectionDirection",
+                    "text" : "Направление подключения",
+                    "type" : "UserEnum",
+                    "default" : "side",
+                    "items" : [
+                        {
+                            "key" : "side",
+                            "text" : "Сбоку"
+                        },
+                        {
+                            "key" : "back",
+                            "text" : "Сзади"
+                        },
+                        {
+                            "key" : "below",
+                            "text" : "Снизу"
+                        }
+                    ]
+                },
+                {
+                    "name" : "portIndentation",
+                    "text" : "Отступ точки подключения",
+                    "type" : "Length",
+                    "default" : 50,
+                    "min" : 0,
+                    "max" : 200
+                }
+            ]
+        },
+        {
+            "name" : "ElectricConnectors",
+            "text" : "Вводные электрические линии",
+            "params" : [
+                {
+                    "name" : "portLocation",
+                    "text" : "Расположение точек подключения",
+                    "type" : "UserEnum",
+                    "default" : "center",
+                    "items" : [
+                        {
+                            "key" : "right",
+                            "text" : "Справа"
+                        },
+                        {
+                            "key" : "center",
+                            "text" : "По центру"
+                        },
+                        {
+                            "key" : "left",
+                            "text" : "Слева"
+                        }
+                    ]
+                },
+                {
+                    "name" : "distanceBetweenPorts",
+                    "text" : "Расстояние между точками подключения",
+                    "type" : "Length",
+                    "default" : 12,
+                    "min" : 0,
+                    "max" : 30
+                },
+                {
+                    "name" : "portIndentation",
+                    "text" : "Отступ точек подключения",
+                    "type" : "Length",
+                    "default" : 6,
+                    "min" : 0,
+                    "max" : 200
+                }
+            ]
+        }
+    ],
+    "ports" : [
+        {
+            "name" : "WaterCoolant",
+            "text" : "Fluid",
+            "flowDirection" : "Inlet",
+            "systemCategories" : [
+                "OtherPipeSystem"
+            ]
+        },
+        {
+            "name" : "GasCoolant",
+            "text" : "Gas",
+            "flowDirection" : "Outlet",
+            "systemCategories" : [
+                "OtherPipeSystem"
+            ]
+        },
+        {
+            "name" : "Drainage",
+            "text" : "Канализация",
+            "flowDirection" : "Outlet",
+            "systemCategories" : [
+                "DomesticSewage",
+                "IndustrialSewage",
+                "OtherPipeSystem"
+            ]
+        },
+        {
+            "name" : "PowerSupplyLine",
+            "text" : "Силовая линия",
+            "systemCategories" : [
+                "PowerCircuit"
+            ]
+        },
+        {
+            "name" : "ControlNetwork1",
+            "text" : "Линия управления 1",
+            "systemCategories" : [
+                "OtherElectricalSystem"
+            ]
+        },
+        {
+            "name" : "ControlNetwork2",
+            "text" : "Линия управления 2",
+            "systemCategories" : [
+                "OtherElectricalSystem"
+            ]
+        }
+    ]
+}

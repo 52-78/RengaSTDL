@@ -1,0 +1,25 @@
+  
+    {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "type": "shell",
+                "label": "Build rst file",
+                "command": "C:\\Users\\kotov\\Downloads\\RengaSTDLSDK\\RstBuilder\\RstBuilder.exe",
+                "args": [
+                    "valve.json",
+                    "valve.lua",                 
+                    "-o",
+                    "Garden valve.rst",
+                    
+                    
+                ],
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                }
+
+            }
+        ]
+    }
+    

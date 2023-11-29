@@ -1,0 +1,119 @@
+{
+    "metadata":{
+      "defaultName": "Кран поливочный",
+      "description": "Оборудование. Кран поливочный. Кран водоразборный.",
+      "version": "1.0.0",
+      "author": "Renga Software"
+   },
+    "styleParameters":[
+       {
+          "name": "General",
+          "text": "Общие",
+          "params": [
+             {
+                "name": "material",
+                "text": "Материал",
+                "type": "Id",
+                "entityTypeId": "0abcb18f-0aaf-4509-bf89-5c5fad9d5d8b"
+             }
+          ]
+       },
+       {
+          "name": "Geometry",
+          "text": "Габаритные размеры",
+          "params": [
+            {
+                "name": "DN",
+                "text": "Номинальный диаметр",
+                "type": "UserEnum",
+                "default": "DN14",
+                "items": [
+                    
+                    {
+                        "key": "DN14",
+                        "text": "G1/2″"
+                    },
+                    {
+                        "key": "DN19",
+                        "text": "G3/4″"
+                    },
+                    {
+                        "key": "DN24",
+                        "text": "G1″"
+                    }
+                ]
+            },
+            {
+                "name": "Purpose",
+                "text": "Назначение крана",
+                "type": "UserEnum",
+                "default": "GardenTap",
+                "items": [
+                    {
+                        "key": "GardenTap",
+                        "text": "Поливочный"
+                    },
+                    {
+                        "key": "StandpipeTap",
+                        "text": "Водоразборный"
+                    }
+                ]
+            }
+          ]
+       },
+       {
+    "name":"Inlet",
+    "text":"Вход",
+    "params":[
+        
+        {
+            "name":"ConnectionType",
+            "text":"Тип соединения",
+            "type":"CoreEnum",
+            "coreEnumType":"PipeConnectorType",
+            "default": "Thread"
+        },
+        {
+            "name": "ThreadSize",
+            "text": "Номинальный диаметр",
+            "type": "CoreEnum",
+            "coreEnumType": "PipeThreadSize",
+            "default": "D0_50"
+        },
+        {
+            "name": "NominalDiameter",
+            "text": "Номинальный диаметр",
+            "type": "Length",
+            "default": 14,
+            "min": 10,
+            "max": 50
+        }
+    ]
+       }         
+
+    ],
+    "ports": [
+       {
+           "name": "Inlet",
+           "text": "Вход",
+           "flowDirection": "Inlet",
+           "systemCategories": [
+            "DomesticColdWater",
+            "DomesticHotWater",
+            "DomesticSewage",
+            "Gas",
+            "Firewater",
+            "Heating",
+            "GaseousFireSuppression",
+            "Rainwater",
+            "IndustrialColdWater",
+            "IndustrialHotWater",
+            "IndustrialSewage",
+            "OtherPipeSystem"
+           ]
+       }
+      
+   ]
+ }
+
+

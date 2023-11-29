@@ -1,0 +1,157 @@
+{
+    "metadata":{
+      "defaultName": "30с941нж",
+      "description": "Аксессуар трубопровода. Задвижка клиновая литая с выдвижным шпинделем фланцевая PN1,6 с электроприводом ЭПЦ 400.",
+      "version": "1.0.0",
+      "author": "Renga Software"
+   },
+    "styleParameters":[
+       {
+          "name": "General",
+          "text": "Общие",
+          "params": [
+             {
+                "name": "material",
+                "text": "Материал",
+                "type": "Id",
+                "entityTypeId": "0abcb18f-0aaf-4509-bf89-5c5fad9d5d8b"
+             }
+          ]
+       },
+       {
+          "name": "Geometry",
+          "text": "Габаритные размеры",
+          "params": [
+            {
+                "name": "DN",
+                "text": "Номинальный диаметр",
+                "type": "UserEnum",
+                "default": "DN150",
+                "items": [
+                    {
+                        "key": "DN50",
+                        "text": "DN50"
+                    },
+                    {
+                        "key": "DN80",
+                        "text": "DN80"
+                    },
+                    {
+                        "key": "DN100",
+                        "text": "DN100"
+                    },
+                    {
+                        "key": "DN125",
+                        "text": "DN125"
+                    },
+                    {
+                        "key": "DN150",
+                        "text": "DN150"
+                    },
+                    {
+                        "key": "DN200",
+                        "text": "DN200"
+                    },
+                    {
+                        "key": "DN250",
+                        "text": "DN250"
+                    },
+                    {
+                        "key": "DN300",
+                        "text": "DN300"
+                    },
+                    {
+                        "key": "DN350",
+                        "text": "DN350"
+                    },
+                    {
+                        "key": "DN400",
+                        "text": "DN400"
+                    }
+                ]
+            }
+          ]
+       },
+       {
+    "name":"Inlet",
+    "text":"Вход",
+    "params":[
+        
+        {
+            "name":"ConnectionType",
+            "text":"Тип соединения",
+            "type":"CoreEnum",
+            "coreEnumType":"PipeConnectorType",
+            "default": "Flange"
+        },
+        {
+            "name": "ThreadSize",
+            "text": "Номинальный диаметр",
+            "type": "CoreEnum",
+            "coreEnumType": "PipeThreadSize",
+            "default": "D6_0"
+        },
+        {
+            "name": "NominalDiameter",
+            "text": "Номинальный диаметр",
+            "type": "Length",
+            "default": 150,
+            "min": 50,
+            "max": 500
+        }
+    ]
+       },
+       {
+        "name":"Outlet",
+        "text":"Выход",
+        "params":[
+            
+             {
+                "name":"ConnectionType",
+                "text":"Тип соединения",
+                "type":"CoreEnum",
+                "coreEnumType":"PipeConnectorType",
+                "default": "Flange"
+            },
+            {
+                "name": "ThreadSize",
+                "text": "Номинальный диаметр",
+                "type": "CoreEnum",
+                "coreEnumType": "PipeThreadSize",
+                "default": "D6_0"
+            },
+            {
+                "name": "NominalDiameter",
+                "text": "Номинальный диаметр",
+                "type": "Length",
+                "default": 150,
+                "min": 50,
+                "max": 500
+            }
+        ]
+           }          
+
+    ],
+    "ports": [
+       {
+           "name": "Inlet",
+           "text": "Вход",
+           "flowDirection": "Inlet",
+           "systemCategories": [
+               "DomesticSewage",
+               "Rainwater",
+               "IndustrialSewage"
+           ]
+       },
+       {
+        "name": "Outlet",
+        "text": "Выход",
+        "flowDirection": "Outlet",
+        "systemCategories": [
+            "DomesticSewage",
+            "Rainwater",
+            "IndustrialSewage"
+        ]
+        }
+   ]
+ }

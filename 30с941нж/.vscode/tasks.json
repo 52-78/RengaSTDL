@@ -1,0 +1,26 @@
+  
+    {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "type": "shell",
+                "label": "Build rst file",
+                "command": "C:\\Users\\kotov\\Downloads\\RengaSTDLSDK\\RstBuilder\\RstBuilder.exe",
+                "args": [
+                    "valve.json",
+                    "actuator.lua",                 
+                    "-o",
+                    "30с941нж.rst",
+                    "-i",
+                    "D:\\MyScripts\\30с941нж\\valve.lua"
+                    
+                ],
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                }
+
+            }
+        ]
+    }
+    

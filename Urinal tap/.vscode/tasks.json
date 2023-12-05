@@ -1,0 +1,25 @@
+  
+    {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "type": "shell",
+                "label": "Build rst file",
+                "command": "C:\\Users\\kotov\\Downloads\\RengaSTDLSDK\\RstBuilder\\RstBuilder.exe",
+                "args": [
+                    "tap.json",
+                    "tap.lua",                 
+                    "-o",
+                    "Urinal tap.rst",
+                    
+                    
+                ],
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                }
+
+            }
+        ]
+    }
+    

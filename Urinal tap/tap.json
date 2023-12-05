@@ -1,0 +1,103 @@
+{
+    "metadata":{
+      "defaultName": "Кран писсуарный",
+      "description": "Оборудование. Кран писсуарный нажимной.",
+      "version": "1.0.0",
+      "author": "Renga Software"
+   },
+    "styleParameters":[
+       {
+          "name": "General",
+          "text": "Общие",
+          "params": [
+             {
+                "name": "material",
+                "text": "Материал",
+                "type": "Id",
+                "entityTypeId": "0abcb18f-0aaf-4509-bf89-5c5fad9d5d8b"
+             }
+          ]
+       },
+       {
+          "name": "Geometry",
+          "text": "Габаритные размеры",
+          "params": [
+            {
+                "name": "Height",
+                "text": "Высота крана",
+                "type": "Length",
+                "default": 190,
+                "min": 1,
+                "max": 1000
+             },
+             {
+                "name": "Depth",
+                "text": "Глубина крана",
+                "type": "Length",
+                "default": 90,
+                "min": 1,
+                "max": 1000
+             },
+             {
+                "name": "DepthOffset",
+                "text": "Смещение выпуска по глубине",
+                "type": "Length",
+                "default": 35,
+                "min": 1,
+                "max": 1000
+             },
+             {
+                "name": "BodyDiameter",
+                "text": "Диаметр корпуса крана",
+                "type": "Length",
+                "default": 35,
+                "min": 1,
+                "max": 1000
+             }
+          ]
+       },
+       {
+    "name":"Inlet",
+    "text":"Вход",
+    "params":[
+        
+        {
+            "name":"ConnectionType",
+            "text":"Тип соединения",
+            "type":"CoreEnum",
+            "coreEnumType":"PipeConnectorType",
+            "default": "Thread"
+        },
+        {
+            "name": "ThreadSize",
+            "text": "Номинальный диаметр",
+            "type": "CoreEnum",
+            "coreEnumType": "PipeThreadSize",
+            "default": "D0_50"
+        },
+        {
+            "name": "NominalDiameter",
+            "text": "Номинальный диаметр",
+            "type": "Length",
+            "default": 14,
+            "min": 10,
+            "max": 50
+        }
+    ]
+       }         
+
+    ],
+    "ports": [
+       {
+           "name": "Inlet",
+           "text": "Вход",
+           "flowDirection": "Inlet",
+           "systemCategories": [
+            "DomesticColdWater"
+            ]
+       }
+      
+   ]
+ }
+
+

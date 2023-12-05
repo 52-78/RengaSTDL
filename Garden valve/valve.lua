@@ -54,7 +54,7 @@ valveShaft = Unite(valveShaft, handle)
 valveShaft:ShowTangentEdges(false)
 local ring = Cylinder(valveType.d/1.5, 5):Rotate(CreateYAxis3D(), math.pi*3/2):Shift(-14, 0, 0)
 valveShaft = Unite(valveShaft, ring)
-
+valveShaft:Rotate(CreateZAxis3D(),math.pi/2)
 
 local tower  = ModelGeometry(valveShaft)
 tower:AddSolid(valveShaft)
@@ -82,7 +82,7 @@ HideIrrelevantPortParams("Inlet")
 
 --Размещаем порты
 local rightPlacement = Placement3D(Point3D(0, 0, 0),
-                                   Vector3D(1, 0, 0), Vector3D(0, 1, 0))
+                                   Vector3D(0, 1, 0), Vector3D(0, 1, 0))--Vector3D(1, 0, 0), Vector3D(0, 1, 0))
 local inletPort = Style.GetPort("Inlet")
 SetPipeParameters(inletPort, parameters.Inlet)
 inletPort:SetPlacement(rightPlacement)
@@ -112,7 +112,8 @@ inletPort:SetPlacement(rightPlacement)
 
 
 
-local symbolPlacement = Placement3D(Point3D(0, 0, 0), Vector3D(0, -1, 0), Vector3D(1, 0, 0))
+local symbolPlacement = Placement3D(Point3D(0, 0, 0), Vector3D(1, 0, 0), Vector3D(0, 1, 0))
+
 local geometrySet = GeometrySet2D()
 geometrySet:AddCurve(ball)
 geometrySet:AddCurve(handle2D)

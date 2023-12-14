@@ -1,0 +1,251 @@
+{
+    "metadata":{
+      "defaultName": "Водяной канальный нагреватель",
+      "description": "Аксессуар воздуховода. Водяной канальный нагреватель",
+      "version": "1.0.0",
+      "author": "Renga Software"
+   },
+    "styleParameters":[
+       {
+          "name": "General",
+          "text": "Общие",
+          "params": [
+             {
+                "name": "material",
+                "text": "Материал",
+                "type": "Id",
+                "entityTypeId": "0abcb18f-0aaf-4509-bf89-5c5fad9d5d8b"
+             }
+          ]
+       },
+       {
+          "name": "Geometry",
+          "text": "Габаритные размеры",
+          "params": [
+             {
+                "name": "Width",
+                "text": "Ширина нагревателя",
+                "type": "Length",
+                "default": 276,
+                "min": 1,
+                "max": 1000
+             },
+             {
+                "name": "Height",
+                "text": "Высота нагревателя",
+                "type": "Length",
+                "default": 255,
+                "min": 1,
+                "max": 1000
+             },
+             {
+               "name": "Depth",
+               "text": "Глубина  нагревателя",
+               "type": "Length",
+               "default": 313,
+               "min": 1,
+               "max": 1000
+            },
+            {
+                "name": "InstallationType",
+                "text": "Положение патрубков теплоносителя",
+                "type": "UserEnum",
+                "default": "Along",
+                "items": [
+                    {
+                        "key": "Along",
+                        "text": "Вдоль воздуховода"
+                        },
+                    {
+                        "key": "Across",
+                        "text": "Поперёк воздуховода"
+                        }
+                ]
+            },
+            {
+                "name": "PipeSpacing",
+                "text": "Расстояние между патрубками теплоносителя",
+                "type": "Length",
+                "default": 212,
+                "min": 50,
+                "max": 1000
+             },
+             {
+                "name": "PipeDiameter",
+                "text": "Диаметр патрубков теплоносителя",
+                "type": "Length",
+                "default": 20,
+                "min": 1,
+                "max": 1000
+             },
+             {
+                "name": "PipeLength",
+                "text": "Расстояние от корпуса до края патрубка теплоносителя",
+                "type": "Length",
+                "default": 50,
+                "min": 1,
+                "max": 1000
+             }
+
+
+          ]
+       },
+       
+            {
+                "name": "Inlet",
+                "text": "Вход воздуха",
+                "params": [
+                    {
+                        "name": "ConnectionType",
+                        "text": "Вид соединения",
+                        "type": "CoreEnum",
+                        "coreEnumType": "DuctConnectorType",
+                        "default": "SlipOn"
+                    },
+                    {
+                        "name": "NominalDiameter",
+                        "text": "Номинальный диаметр",
+                        "type": "Length",
+                        "default": "200",
+                        "min": "1",
+                        "max": "1000000"
+                    },
+                    {
+                        "name": "NippleLength",
+                        "text": "Длина патрубка",
+                        "type": "Length",
+                        "default": "50",
+                        "min": "0",
+                        "max": "1000000"
+                    }
+                ]
+            },
+            {
+                "name": "Outlet",
+                "text": "Выход воздуха",
+                "params": [
+                    {
+                        "name": "ConnectionType",
+                        "text": "Вид соединения",
+                        "type": "CoreEnum",
+                        "coreEnumType": "DuctConnectorType",
+                        "default": "SlipOn"
+                    },
+                    {
+                        "name": "NominalDiameter",
+                        "text": "Номинальный диаметр",
+                        "type": "Length",
+                        "default": "200",
+                        "min": "1",
+                        "max": "10000"
+                    },
+                    {
+                        "name": "NippleLength",
+                        "text": "Длина патрубка",
+                        "type": "Length",
+                        "default": "50",
+                        "min": "0",
+                        "max": "10000"
+                    }
+                ]
+            },
+            {
+                "name":"Water1",
+                "text":"Теплоноситель 1",
+                "params":[
+                    {
+                        "name":"ConnectionType",
+                        "text":"Вид соединения",
+                        "type":"CoreEnum",
+                        "coreEnumType":"PipeConnectorType",
+                        "default": "Thread"
+                    },
+                    {
+                        "name": "ThreadSize",
+                        "text": "Номинальный диаметр",
+                        "type": "CoreEnum",
+                        "coreEnumType": "PipeThreadSize",
+                        "default": "D0_375"
+                    },
+                    {
+                        "name": "NominalDiameter",
+                        "text": "Номинальный диаметр",
+                        "type": "Length",
+                        "default": 25,
+                        "min": 1,
+                        "max": 1000
+                    }
+                ]
+                   },
+                   {
+                     "name":"Water2",
+                     "text":"Теплоноситель 2",
+                     "params":[
+                         {
+                             "name":"ConnectionType",
+                             "text":"Вид соединения",
+                             "type":"CoreEnum",
+                             "coreEnumType":"PipeConnectorType",
+                             "default": "Thread"
+                         },
+                         {
+                             "name": "ThreadSize",
+                             "text": "Номинальный диаметр",
+                             "type": "CoreEnum",
+                             "coreEnumType": "PipeThreadSize",
+                             "default": "D0_375"
+                         },
+                         {
+                             "name": "NominalDiameter",
+                             "text": "Номинальный диаметр",
+                             "type": "Length",
+                             "default": 25,
+                             "min": 1,
+                             "max": 1000
+                         }
+                     ]
+                        }          
+    ],
+    "ports": [
+      {
+         "name": "Inlet",
+         "text": "Вход воздуха",
+         "flowDirection": "Inlet",
+         "portRole":"TransitPort",
+         "systemCategories": [
+             "Ventilation",
+             "OtherDuctSystem"
+         ]
+     },
+     {
+      "name": "Outlet",
+      "text": "Выход воздуха",
+      "flowDirection": "Outlet",
+      "portRole":"TransitPort",
+      "systemCategories": [
+          "Ventilation",
+          "OtherDuctSystem"
+      ]
+  }, 
+      {
+           "name": "Water1",
+           "text": "Теплоноситель 1",
+           "flowDirection": "InletAndOutlet",
+           "portRole": "EndPort",
+           "systemCategories": [
+               "Heating",
+               "OtherPipeSystem"
+           ]
+       },
+       {
+         "name": "Water2",
+         "text": "Теплоноситель 2",
+         "flowDirection": "InletAndOutlet",
+         "portRole": "EndPort",
+         "systemCategories": [
+             "Heating",
+             "OtherPipeSystem"
+         ]
+     }
+   ]
+ }

@@ -1,0 +1,23 @@
+  
+    {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "type": "shell",
+                "label": "Build rst file",
+                "command": "D:\\Renga_green\\master\\RstBuilder.exe",
+                "args": [
+                    "param.json",
+                    "run.lua",                 
+                    "-o",
+                    "Water duct heater.rst"
+                ],
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                }
+
+            }
+        ]
+    }
+    

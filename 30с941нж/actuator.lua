@@ -190,20 +190,25 @@ HideIrrelevantPortParams("Outlet")
 
 --Размещаем порты
 local leftPlacement = Placement3D(Point3D(-ValveParam.L/2, 0, 0),
-                                  Vector3D(-1, 0, 0), Vector3D(0, 1, 0))
+                                    Vector3D(-1, 0, 0), Vector3D(0, 1, 0))
 
 local rightPlacement = Placement3D(Point3D(ValveParam.L/2, 0, 0),
-                                   Vector3D(1, 0, 0), Vector3D(0, 1, 0))
+                                    Vector3D(1, 0, 0), Vector3D(0, 1, 0))
 
+local powerPlacement = Placement3D(Point3D(263, -78, ValveParam.H+20),
+                                    Vector3D(0, 0, -1), Vector3D(0, 1, 0))
 
 local inletPort = Style.GetPort("Inlet")
 local outletPort = Style.GetPort("Outlet")
+local powerPort = Style.GetPort("PowerSupply")
 
 SetPipeParameters(inletPort, parameters.Inlet)
 SetPipeParameters(outletPort, parameters.Outlet)
 
+
 inletPort:SetPlacement(leftPlacement)
 outletPort:SetPlacement(rightPlacement)
+powerPort:SetPlacement(powerPlacement)
 
 --УГО 
 local function add_body(geometry, length, radius)

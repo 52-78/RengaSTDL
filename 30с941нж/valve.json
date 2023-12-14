@@ -137,6 +137,7 @@
            "name": "Inlet",
            "text": "Вход",
            "flowDirection": "Inlet",
+           "portRole":"TransitPort",
            "systemCategories": [
                "DomesticSewage",
                "Rainwater",
@@ -147,11 +148,22 @@
         "name": "Outlet",
         "text": "Выход",
         "flowDirection": "Outlet",
+        "portRole":"TransitPort",
         "systemCategories": [
             "DomesticSewage",
             "Rainwater",
             "IndustrialSewage"
         ]
+        },
+        {
+            "name": "PowerSupply",
+            "text": "Силовая сеть",
+            "flowDirection": "InletAndOutlet",
+            "portRole": "EndPort",
+            "systemCategories": [
+                "PowerCircuit",
+                "OtherElectricalSystem"
+            ]
         }
    ]
  }

@@ -5,7 +5,7 @@
             {
                 "type": "shell",
                 "label": "Build rst file",
-                "command": "C:\\Users\\kotov\\Downloads\\RengaSTDLSDK\\RstBuilder\\RstBuilder.exe",
+                "command": "D:\\Renga_green\\master\\RstBuilder.exe",
                 "args": [
                     "valve.json",
                     "actuator.lua",                 
